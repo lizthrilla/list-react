@@ -2,13 +2,61 @@
 
 $base-text-size: 16px;
 $base-font-family: sans-serif;
+$poa-purple: rebeccapurple;
+$primary-text-color: #fff;
 
 html {
   text-size-adjust: 100%;
+  height: 100%;
 }
 
 body {
   @include font-smoothing(on);
+
+  background-color: rebeccapurple;
   margin: 0;
   font: $base-text-size / 1 $base-font-family;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: coloumn;
+  color: $primary-text-color;
+
+  h1 {
+    text-align: center;
+  }
+
+  ul {
+    text-align: center;
+    list-style: none;
+    padding-left: 0;
+
+    li.done {
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+  }
+
+  form {
+    text-align: center;
+
+    input {
+      font-size: 22px;
+      text-align: center;
+      background-color: hsla(0, 0%, 100%, 0.5);
+      border: none;
+      padding: 8px;
+
+      &:focus {
+        outline: none;
+        background-color: hsla(0, 0%, 100%, 0.25);
+        color: $primary-text-color;
+      }
+
+      &::placeholder {
+        color: $poa-purple;
+      }
+    }
+  }
 }
