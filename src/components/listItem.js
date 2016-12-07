@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
 
-class List extends Component {
+class ListItem extends Component {
 
   render () {
+    const done = this.props.value
+
+    return items className={`${styles.root} ${done}`}
+    onClick
   }
 
 }
 
-export default List
+export default ListItem
