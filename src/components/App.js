@@ -25,6 +25,7 @@ class App extends Component {
       value: ''
     })
   }
+
   toggleComplete = (i) => {
     const items = this.state.items.slice()
     items[i].done = !items[i].done
@@ -33,10 +34,18 @@ class App extends Component {
     })
   }
 
+  removeItem = (i) => {
+    const items = this.state.items.slice()
+    items.splice(i, 1)
+    this.setState({
+      items: items
+    })
+  }
+
   render () {
     const items = this.state.items.map((item, i) => {
       const isDone = item.done ? styles.done : ''
-      return <li className={isDone} key={i} onClick={() => this.toggleComplete(i)}> {item.label} </li>
+      return <li className={isDone} key={i} onClick={() => this.toggleComplete(i)} onDoubleClick={() => this.removeItem(i)}> {item.label} </li>
     })
     return <div className={styles.root}>
       <header>
