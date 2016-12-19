@@ -57,6 +57,7 @@ class App extends Component {
       <form onSubmit={this.handleSubmit}>
         <input type='text' value={this.state.value} onChange={this.handleChange} placeholder='What to do?' />
       </form>
+      <h6>&copy; 2016 Liz Tiller.  Built at the Iron Yard - Tampa </h6>
     </div>
   }
 }
