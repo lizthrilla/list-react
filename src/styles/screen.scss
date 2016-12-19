@@ -12,7 +12,7 @@ html {
 body {
   @include font-smoothing(on);
 
-  background-color: lighten(goldenrod;10%);
+  background-color: lighten(goldenrod, 20%);
   margin: 0;
   font: $base-text-size / 1 $base-font-family;
   min-height: 100%;
